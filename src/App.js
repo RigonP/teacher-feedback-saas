@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+// src/App.tsx
+import React from 'react';
+import FeedbackForm from './components/FeedbackForm';
 import './App.css';
 
 function App() {
+  // Këto do të vijnë nga authentication system në realitet
+  const currentStudentId = 123; // ID e studentit të loguar
+  const selectedTeacherId = 456; // ID e mësuesit për të cilin jepet feedback
+  const selectedTeacherName = "Prof. John Doe"; // Emri i mësuesit
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FeedbackForm 
+        teacherId={selectedTeacherId}
+        teacherName={selectedTeacherName}
+        studentId={currentStudentId}
+      />
     </div>
   );
 }
