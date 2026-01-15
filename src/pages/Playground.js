@@ -4,11 +4,9 @@ import './Playground.css';
 
 const Playground = () => {
   const { apiKey } = useAuth();
-  const [endpoint, setEndpoint] = useState('https://localhost:7258/api/feedback');
+  const [endpoint, setEndpoint] = useState('http://localhost:5000/predict');
   const [method, setMethod] = useState('POST');
   const [requestBody, setRequestBody] = useState(JSON.stringify({
-    teacherId: 1,
-    studentId: 1,
     comment: "Ky është një test komenti për të parë si funksionon API..."
   }, null, 2));
   const [response, setResponse] = useState(null);
@@ -20,24 +18,16 @@ const Playground = () => {
 
   const exampleRequests = {
     positive: {
-      teacherId: 1,
-      studentId: 1,
-      comment: "Mësuesi shpjegon shumë mirë dhe është i durueshëm me studentët. Urime për punën e shkëlqyer!"
+      text: "Mësuesi shpjegon shumë mirë dhe është i durueshëm me studentët. Urime për punën e shkëlqyer!"
     },
     negative: {
-      teacherId: 1,
-      studentId: 1,
-      comment: "Ky mësues është i tmerrshëm, nuk di të mësojë fare! Turp!"
+      text: "Ky mësues është i tmerrshëm, nuk di të mësojë fare! Turp!"
     },
     neutral: {
-      teacherId: 1,
-      studentId: 1,
-      comment: "Mësimi ishte mesatar, ka gjëra që mund të përmirësohen në të ardhmen."
+      text: "Mësimi ishte mesatar, ka gjëra që mund të përmirësohen në të ardhmen."
     },
     toxic: {
-      teacherId: 1,
-      studentId: 1,
-      comment: "Je idiot i madh! Nuk di asgjë dhe je i pafytyrë!"
+      text: "Je idiot i madh! Nuk di asgjë dhe je i pafytyrë!"
     }
   };
 
