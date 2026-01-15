@@ -1,22 +1,32 @@
-// src/App.tsx
 import React from 'react';
-import FeedbackForm from './components/FeedbackForm';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import Playground from './pages/Playground';
+import Pricing from './pages/Pricing';
+import Documentation from './pages/Documentation';
 import './App.css';
 
 function App() {
-  // Këto do të vijnë nga authentication system në realitet
-  const currentStudentId = 123; // ID e studentit të loguar
-  const selectedTeacherId = 456; // ID e mësuesit për të cilin jepet feedback
-  const selectedTeacherName = "Prof. John Doe"; // Emri i mësuesit
-
   return (
-    <div className="App">
-      <FeedbackForm 
-        teacherId={selectedTeacherId}
-        teacherName={selectedTeacherName}
-        studentId={currentStudentId}
-      />
-    </div>
+    <AuthProvider>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/playground" element={<Playground />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/docs" element={<Documentation />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 
