@@ -45,6 +45,20 @@ To get started with the Teacher Feedback App, follow these steps:
 
 ## Usage
 Once the application is running, navigate to `http://localhost:3000` in your web browser. You can register as a new user or log in to submit feedback.
+## Screenshots
+
+### Home Page
+<img width="1897" height="899" alt="Screenshot 2026-01-16 191619" src="https://github.com/user-attachments/assets/3a4280b8-f5e7-446b-a005-339ead8c6441" />
+
+### API Playground
+<img width="1897" height="880" alt="Screenshot 2026-01-16 191704" src="https://github.com/user-attachments/assets/ce2ca0ab-d6bf-42b4-898d-f28848097a2a" />
+
+### Pricing
+<img width="1595" height="904" alt="Screenshot 2026-01-16 191823" src="https://github.com/user-attachments/assets/38235efd-5315-47bb-ab05-9992f26edca7" />
+
+### Docs
+<img width="1901" height="886" alt="image" src="https://github.com/user-attachments/assets/1e8776a9-5036-47b8-bee4-8dd3cb4b6e36" />
+
 
 ## Components
 The application consists of several key components:
