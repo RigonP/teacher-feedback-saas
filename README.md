@@ -1,6 +1,6 @@
 # Teacher Feedback App
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Status](https://img.shields.io/badge/status-active-brightgreen.svg) ![Tech Stack](https://img.shields.io/badge/tech%20stack-React%20%7C%20Node.js%20%7C%20CSS-lightgrey.svg)
+ ![Status](https://img.shields.io/badge/status-active-brightgreen.svg) ![Tech Stack](https://img.shields.io/badge/tech%20stack-React%20%7C%20Node.js%20%7C%20CSS-lightgrey.svg)
 
 ## Table of Contents
 - [Introduction](#introduction)
